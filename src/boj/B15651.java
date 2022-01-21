@@ -31,11 +31,8 @@ public class B15651 {
     }
 
     public static void main(String[] args) {
-//        input();
+        input();
 
-        N = 3;
-        M = 4;
-        selected = new int[M+1];
         req_funk(1);
         System.out.println(sb.toString());
     }
