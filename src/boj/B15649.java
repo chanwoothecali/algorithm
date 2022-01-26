@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class B15649 {
 
     static int N, M;
-    static int[] selected;
+    static int[] selected, used;
 
     static StringBuilder sb = new StringBuilder();
 
@@ -14,6 +14,7 @@ public class B15649 {
         N = reader.nextInt();
         M = reader.nextInt();
         selected = new int[M + 1];
+        used = new int[N + 1];
     }
 
     static void reqFunc(int k) {
@@ -22,17 +23,12 @@ public class B15649 {
             sb.append('\n');
         }else {
             for (int i = 1; i <= N; i++) {
-                boolean isUsed = false;
-                for (int j = 1; j < k; j++) {
-                    if(selected[j] == i) {
-                        isUsed = true;
-                    }
-                }
-                if(!isUsed){
-                    selected[k] = i;
-                    reqFunc(k+1);
-                    selected[k] = 0;
-                }
+                if(used[i] == 1) continue;
+                selected[k] = i;
+                used[i] = 1;
+                reqFunc(k+1);
+                selected[k] = 0;
+                used[i] = 0;
             }
         }
     }

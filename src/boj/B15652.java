@@ -24,16 +24,11 @@ public class B15652 {
             }
             sb.append('\n');
         }else {
-            for (int i = 1; i <= N; i++) {
-                boolean isPassed = true;
-                for (int j = 1; j < k; j++) {
-                    if(selected[j] > i) isPassed = false;
-                }
-                if(isPassed) {
-                    selected[k] = i;
-                    reqFunc(k + 1);
-                    selected[k] = 0;
-                }
+            int start = selected[k-1]==0 ? 1:selected[k-1];
+            for (int i = start; i <= N; i++) {
+                selected[k] = i;
+                reqFunc(k + 1);
+                selected[k] = 0;
             }
         }
     }
