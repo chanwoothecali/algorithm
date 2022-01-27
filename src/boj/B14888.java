@@ -24,21 +24,17 @@ public class B14888 {
     static void reqFunc(int k) {
         if(k == N) {
             int result = calculate();
-            if(max < result) {
-                max = result;
-            }
-            if(min > result) {
-                min = result;
-            }
+            Math.max(max, result);
+            Math.min(min, result);
         }else {
             for (int i = 0; i < 4; i++) {
                 if(operators[i] == 0){
                     continue;
                 }else {
                     order[k] = i;
-                    operators[i] -= 1;
+                    operators[i]--;
                     reqFunc(k + 1);
-                    operators[i] += 1;
+                    operators[i]++;
                     order[k] = 0;
                 }
             }
