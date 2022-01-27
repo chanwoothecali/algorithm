@@ -3,7 +3,7 @@ package boj;
 public class B14888 {
     static int N, max, min;
     static int[] numbers, order;
-    static int[] operators = new int[4];
+    static final int[] operators = new int[4];
 
     static void input() {
         FastReader scan = new FastReader();
@@ -24,13 +24,11 @@ public class B14888 {
     static void reqFunc(int k) {
         if(k == N) {
             int result = calculate();
-            Math.max(max, result);
-            Math.min(min, result);
+            max = Math.max(max, result);
+            min = Math.min(min, result);
         }else {
             for (int i = 0; i < 4; i++) {
-                if(operators[i] == 0){
-                    continue;
-                }else {
+                if(operators[i] > 0){
                     order[k] = i;
                     operators[i]--;
                     reqFunc(k + 1);
