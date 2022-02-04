@@ -1,94 +1,60 @@
 package boj;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class B15970 {
 
     static int N;
-    static FastReader scan = new FastReader();
-    static Point[] graph;
-
-    static class Point implements Comparable<Point>{
-        int x, y; //좌표, 색깔
-
-        @Override
-        public int compareTo(Point o) {
-            if(this.y == o.y) return this.x - o.x;
-            return this.y - o.y;
-        }
-
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        @Override
-        public String toString() {
-            return "Point{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    '}';
-        }
-    }
+    static final FastReader scan = new FastReader();
+    static ArrayList<Integer>[] a;
 
     static void input() {
         N = scan.nextInt();
-        graph = new Point[N];
-        for (int i = 0; i < N; i++) {
-            String[] strings = scan.nextLine().split(" ");
-            graph[i] = new Point(Integer.parseInt(strings[0]), Integer.parseInt(strings[1]));
+        a = new ArrayList[N + 1];
+        // 문제를 잘 읽어보자...
+        // 0부터 N-1까지로 했다가 안되길래 대체 왜인가 했더니
+        // 문제 자체에 N은 2부터 시작한다는 조건이 있었음
+        for (int color = 1; color <= N; color++) {
+            a[color] = new ArrayList<>();
+        }
+        for (int i = 1; i <= N; i++) {
+            int x = scan.nextInt();
+            int y = scan.nextInt();
+            a[y].add(x);
         }
     }
 
     static void solve() {
-        Arrays.sort(graph);
+        int ans = 0;
 
-        for (int i = 0; i < N; i++) {
-            System.out.println(graph[i].toString());
-        }
-
-        int length = 0;
-        if (graph[0].y == graph[1].y) {
-            length += graph[1].x - graph[0].x;
-        }
-        System.out.println(length);
-        for (int i = 1; i < N - 1; i++) {
-            length += compare(graph[i - 1], graph[i], graph[i + 1]);
-            System.out.println(length);
-        }
-        if (N > 2 && graph[N - 1].y == graph[N - 2].y) {
-            length += graph[N - 1].x - graph[N - 2].x;
+        for (int color = 1; color <= N; color++) {
+            if (a[color].isEmpty()) continue;
+            Collections.sort(a[color]);
+            for (int i = 0; i < a[color].size(); i++) {
+                int leftArrow = toLeft(color, i);
+                int rightArrow = toRight(color, i);
+                ans += Math.min(leftArrow, rightArrow);
+            }
         }
 
-        System.out.println(length);
+        System.out.println(ans);
     }
 
-    private static int compare(Point prev, Point curr, Point next) {
-        /*
-        int prevLength = Integer.MAX_VALUE;
-        int nextLength = Integer.MAX_VALUE;
-        if(curr.y == prev.y) prevLength = curr.x - prev.x;
-        if(curr.y == next.y) nextLength = next.x - curr.x;*/
-
-        if (curr.y == prev.y && curr.y == next.y) {
-            if (curr.x - prev.x <= next.x - curr.x) {
-                return curr.x - prev.x;
-            } else {
-                return next.x - curr.x;
-            }
-        } else if (curr.y == prev.y) {
-            return curr.x - prev.x;
-        } else if (curr.y == next.y) {
-            return next.x - curr.x;
-        } else {
-            return 0;
+    static int toLeft(int color, int idx) {
+        if (idx == 0) {
+            return Integer.MAX_VALUE;
+        }else {
+            return a[color].get(idx) - a[color].get(idx - 1);
         }
+    }
 
-        /*if (prevLength <= nextLength) {
-            return prevLength;
-        } else {
-            return nextLength;
-        }*/
+    static int toRight(int color, int idx) {
+        if (idx == a[color].size() - 1) {
+            return Integer.MAX_VALUE;
+        }else {
+            return a[color].get(idx + 1) - a[color].get(idx);
+        }
     }
 
     public static void main(String[] args) {
