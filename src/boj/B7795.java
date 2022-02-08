@@ -7,47 +7,15 @@ import java.util.Arrays;
  * 문제에서 설정된 N,M의 범위는 20,000 -> O(N^2)이면 4억. -> 4초
  * 문제의 제한시간은 1초이기 때문에 4초로는 통과할 수 없다.
  * 때문에 O(NlogN)의 시간복잡도를 도출하는 이분탐색 알고리즘을 채택
+ *
+ * 1. B 배열 정렬 => O(MlogM)
+ * 2. 모든 A의 원소마다 B 배열에 대해 이분 탐색 => O(NlogM)
+ * - 총 시간복잡도 = O((N+M)logM) => O(NlogN)
  */
 public class B7795 {
     private FastReader scan = new FastReader();
     private int T, N, M;
     private int[] A, B;
-    private StringBuilder sb = new StringBuilder();
-
-    void solve() {
-        T = scan.nextInt();
-        // 테스트케이스 별로 수행
-        for (int i = 0; i < T; i++) {
-            setting();
-            sb.append(numberOfPair()).append('\n');
-        }
-        System.out.println(sb);
-    }
-
-    private int numberOfPair() {
-        int ans = 0, mid = 0;
-
-        for (int i = 0; i < N; i++) {
-            int left = 0, right = M - 1;
-
-            // 왼쪽 범위가 오른쪽 범위를 넘어서면 break;
-            while (left <= right) {
-                mid = (left + right) / 2;
-                // B보다 A가 크거나 같을 경우 오른쪽 범위를 지금 비교한 B의 위치보다 하나 줄임
-                if(B[mid] >= A[i]) {
-                    right = mid - 1;
-                // B보다 A가 작은 경우 왼쪽 범위를 지금 비교한 B의 위치보다 하나 크게 잡음
-                }else if(B[mid] < A[i]) {
-                    left = mid + 1;
-                }
-            }
-            // B[0] < A[i] < B[1]인 경우 mid가 0으로 도출되기 때문에 경우의 수 1을 더해준다.
-            if(B[0] < A[i]) ans += 1;
-            ans += mid;
-        }
-
-        return ans;
-    }
 
     private void setting() {
         N = scan.nextInt();
@@ -60,11 +28,48 @@ public class B7795 {
         for (int i = 0; i < M; i++) {
             B[i] = scan.nextInt();
         }
+    }
+
+    void main() {
+        T = scan.nextInt();
+        for (int i = 0; i < T; i++) {
+            setting();
+            solve();
+        }
+    }
+
+    private void solve() {
         Arrays.sort(B);
+
+        int ans = 0;
+        for (int index = 0; index < N; index++) {
+            ans += lowBound(index);
+        }
+
+        System.out.println(ans);
+    }
+
+    private int lowBound(int index) {
+        int left = 0, right = M - 1;
+        int mid;
+
+        while (left <= right) {
+            mid = (left + right) / 2;
+            // B보다 A가 크거나 같을 경우 오른쪽 범위를 지금 비교한 B의 위치보다 하나 줄임
+            if(B[mid] >= A[index]) {
+                right = mid - 1;
+            // B보다 A가 작은 경우 왼쪽 범위를 지금 비교한 B의 위치보다 하나 크게 잡음
+            }else if(B[mid] < A[index]) {
+                left = mid + 1;
+            }
+        }
+
+        // left 값이 본인보다 작은 값들의 수가 된다.
+        return left;
     }
 
     public static void main(String[] args) {
         B7795 b7795 = new B7795();
-        b7795.solve();
+        b7795.main();
     }
 }
