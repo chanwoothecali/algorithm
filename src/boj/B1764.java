@@ -41,15 +41,15 @@ public class B1764 {
         int left = 0, right = M - 1;
 
         while (left <= right) {
-            int cussor = (left + right) / 2;
-            String neverSeenName = neverSeen[cussor];
+            int cursor = (left + right) / 2;
+            String neverSeenName = neverSeen[cursor];
             if(neverSeenName.equals(neverHeardName)) {
                 neverHeardSeen.add(neverHeardName);
                 break;
             } else if (neverSeenName.compareTo(neverHeardName) < 0) {
-                left = cussor + 1;
+                left = cursor + 1;
             } else if (neverSeenName.compareTo(neverHeardName) > 0) {
-                right = cussor - 1;
+                right = cursor - 1;
             }
         }
     }
