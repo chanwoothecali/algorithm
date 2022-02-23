@@ -1,95 +1,79 @@
 package boj;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
 
 public class B2470 {
-    private FastReader scan = new FastReader();
+    private final FastReader scan = new FastReader();
     private int N;
-    private List<Integer> acid = new ArrayList<>(), alkali = new ArrayList<>();
+    private int[] solutions;
 
     private void input() {
         N = scan.nextInt();
+        solutions = new int[N];
         for (int i = 0; i < N; i++) {
-            int solution = scan.nextInt();
-            classify(solution);
-        }
-    }
-
-    private void classify(int solution) {
-        if (solution < 0) {
-            acid.add(Math.abs(solution));
-        } else if (solution > 0) {
-            alkali.add(solution);
+            solutions[i] = scan.nextInt();
         }
     }
 
     private void solve() {
-        Collections.sort(acid);
-        int mixedSolution = Integer.MAX_VALUE;
-        int a = 0, b = 0;
+        Arrays.sort(solutions);
 
-        for (int alkaliIndex = 0; alkaliIndex < alkali.size(); alkaliIndex++) {
-            int acidMidIndex = findAcidMid(alkali.get(alkaliIndex));
-            int acidIndex = findAcidIndex(acidMidIndex, alkaliIndex);
+        int result = Integer.MAX_VALUE;
+        int v1 = 0, v2 = 0;
 
-            int mixed = alkali.get(alkaliIndex) - acid.get(acidIndex);
-            if (Math.abs(mixedSolution) > Math.abs(mixed)) {
-                mixedSolution = mixed;
-                a = acidIndex;
-                b = alkaliIndex;
+        for (int i = 0; i < N - 1; i++) {
+            int candidate = findOppositeIndex(solutions[i], i);
+            int opposite = checkCandidate(i, candidate);
+
+            if (result > Math.abs(solutions[opposite] + solutions[i])) {
+                result = Math.abs(solutions[opposite] + solutions[i]);
+                v1 = solutions[i];
+                v2 = solutions[opposite];
             }
         }
 
-        System.out.println(-acid.get(a) + " " + alkali.get(b));
+        System.out.println(v1 + " " + v2);
     }
 
-    private int findAcidMid(Integer alkaliSolution) {
-        int left = 0, right = acid.size() - 1;
-        int mid = (left + right) / 2;
+    private int checkCandidate(int currIndex, int candidate) {
+        System.out.println(currIndex + " " + candidate);
+        if (candidate >= N) return candidate - 1;
 
-        while (left <= right) {
-            mid = (left + right) / 2;
-            int acidSolution = acid.get(mid);
-            if (acidSolution > alkaliSolution) {
-                right = mid - 1;
-            } else if (acidSolution < alkaliSolution) {
-                left = mid + 1;
-            } else {
-               return mid;
-            }
-        }
-        return mid;
-    }
+        if (candidate - 1 == currIndex) return candidate;
 
-    private int findAcidIndex(int acidIndex, int alkaliIndex) {
-        if (acidIndex + 1 == acid.size() || acid.size() < 2) {
-            return acidIndex;
-        }
+        if (candidate == currIndex) return candidate - 1;
 
-        int mixedA = alkali.get(alkaliIndex) - acid.get(acidIndex);
-        int mixedB = alkali.get(alkaliIndex) - acid.get(acidIndex + 1);
-        if (mixedA >= mixedB) {
-            return acidIndex;
+        int result1 = Math.abs(solutions[currIndex] + solutions[candidate]);
+        int result2 = Math.abs(solutions[currIndex] + solutions[candidate - 1]);
+
+
+        if (result1 <= result2) {
+            return candidate;
         } else {
-            return acidIndex + 1;
+            return candidate - 1;
         }
+    }
+
+    private int findOppositeIndex(int v1, int index) {
+        int left = index + 1, right = N - 1;
+        int result = right + 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (solutions[mid] == -v1) {
+                return mid;
+            } else if (solutions[mid] > -v1) {
+                result = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return result;
     }
 
     public void main() {
         input();
-        if (acid.isEmpty()) {
-            Collections.sort(alkali);
-            System.out.println(alkali.get(0) + " " + alkali.get(1));
-            return;
-        }
-
-        if (alkali.isEmpty()) {
-            Collections.sort(acid);
-            System.out.println(acid.get(0) + " " + acid.get(1));
-            return;
-        }
         solve();
     }
 
