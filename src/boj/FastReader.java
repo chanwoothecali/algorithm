@@ -25,12 +25,15 @@ public class FastReader {
     int nextInt() {
         return Integer.parseInt(next());
     }
+
     long nextLong() {
         return Long.parseLong(next());
     }
+
     double nextDouble() {
         return Double.parseDouble(next());
     }
+
     String nextLine() {
         String str = "";
         try {
@@ -39,5 +42,23 @@ public class FastReader {
             e.printStackTrace();
         }
         return str;
+    }
+
+    StringTokenizer spaceToken() {
+        try {
+            st = new StringTokenizer(br.readLine(), " ");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return st;
+    }
+
+    StringTokenizer commaToken() {
+        try {
+            st = new StringTokenizer(br.readLine(), ",");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return st;
     }
 }
