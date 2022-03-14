@@ -22,19 +22,19 @@ public class B2003 {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
-        A = new int[N];
+        A = new int[N + 1];
         st = scan.spaceToken();
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i <= N; i++) {
             A[i] = Integer.parseInt(st.nextToken());
         }
     }
 
     private void solve() {
-        int R = -1, sum = 0, cnt = 0;
-        for (int L = 0; L < N; L++) {
-            if (L != 0) sum -= A[L - 1];
+        int R = 0, sum = 0, cnt = 0;
+        for (int L = 1; L <= N; L++) {
+            sum -= A[L - 1];
 
-            while (R + 1 < N && sum < M) {
+            while (R < N && sum < M) {
                 sum += A[++R];
             }
 
