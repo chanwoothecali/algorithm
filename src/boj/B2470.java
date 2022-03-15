@@ -1,17 +1,21 @@
 package boj;
 
 import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class B2470 {
     private final FastReader scan = new FastReader();
+    //
     private int N;
     private int[] solutions;
 
     private void input() {
         N = scan.nextInt();
+
         solutions = new int[N];
+        StringTokenizer st = scan.spaceToken();
         for (int i = 0; i < N; i++) {
-            solutions[i] = scan.nextInt();
+            solutions[i] = Integer.parseInt(st.nextToken());
         }
     }
 
@@ -35,6 +39,24 @@ public class B2470 {
         System.out.println(v1 + " " + v2);
     }
 
+    private int findOppositeIndex(int v1, int index) {
+        int left = index + 1, right = N - 1;
+        int result = right + 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (solutions[mid] == -v1) {
+                return mid;
+            } else if (solutions[mid] > -v1) {
+                result = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return result;
+    }
+
     private int checkCandidate(int currIndex, int candidate) {
         System.out.println(currIndex + " " + candidate);
         if (candidate >= N) return candidate - 1;
@@ -54,27 +76,41 @@ public class B2470 {
         }
     }
 
-    private int findOppositeIndex(int v1, int index) {
-        int left = index + 1, right = N - 1;
-        int result = right + 1;
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            if (solutions[mid] == -v1) {
-                return mid;
-            } else if (solutions[mid] > -v1) {
-                result = mid;
-                right = mid - 1;
+    private void solveTwoPointer() {
+        Arrays.sort(solutions);
+
+        StringBuilder sb = new StringBuilder();
+
+        int ans = Integer.MAX_VALUE;
+        int v1 = 0, v2 = 0, L = 0, R = N - 1;
+
+        while (L < R){  // L == R 인 상황이면 용액이 한 개 뿐인 것이므로, L < R 일 때까지만 반복한다.
+            int mixedSolution = solutions[L] + solutions[R];
+
+            if (ans > Math.abs(mixedSolution)) {
+                v1 = solutions[L];
+                v2 = solutions[R];
+                ans = Math.abs(mixedSolution);
+            }
+
+            if (mixedSolution == 0) {
+                v1 = solutions[L];
+                v2 = solutions[R];
+                break;
+            } else if (mixedSolution < 0) {
+                L++;
             } else {
-                left = mid + 1;
+                R--;
             }
         }
-
-        return result;
+        sb.append(v1).append(' ').append(v2);
+        System.out.println(sb);
     }
 
     public void main() {
         input();
-        solve();
+//        solve();
+        solveTwoPointer();
     }
 
     public static void main(String[] args) {
