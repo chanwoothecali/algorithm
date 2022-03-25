@@ -1,4 +1,6 @@
-package boj;
+package boj.bruteforce;
+
+import boj.FastReader;
 
 public class B15651 {
 

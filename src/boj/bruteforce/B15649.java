@@ -1,9 +1,14 @@
-package boj;
+package boj.bruteforce;
 
-public class B15652 {
+import boj.FastReader;
+
+import java.util.Arrays;
+
+public class B15649 {
 
     static int N, M;
-    static int[] selected;
+    static int[] selected, used;
+
     static StringBuilder sb = new StringBuilder();
 
     static void input() {
@@ -11,24 +16,21 @@ public class B15652 {
         N = reader.nextInt();
         M = reader.nextInt();
         selected = new int[M + 1];
-    }
-
-    static void print(StringBuilder sb) {
-        System.out.println(sb.toString());
+        used = new int[N + 1];
     }
 
     static void reqFunc(int k) {
-        if (k == M + 1) {
-            for (int i = 1; i < k; i++) {
-                sb.append(selected[i]).append(' ');
-            }
+        if(k == M+1) {
+            for (int i = 1; i <= M; i++) sb.append(selected[i]).append(' ');
             sb.append('\n');
         }else {
-            int start = selected[k-1]==0 ? 1:selected[k-1];
-            for (int i = start; i <= N; i++) {
+            for (int i = 1; i <= N; i++) {
+                if(used[i] == 1) continue;
                 selected[k] = i;
-                reqFunc(k + 1);
+                used[i] = 1;
+                reqFunc(k+1);
                 selected[k] = 0;
+                used[i] = 0;
             }
         }
     }
@@ -37,6 +39,6 @@ public class B15652 {
         input();
 
         reqFunc(1);
-        print(sb);
+        System.out.println(sb.toString());
     }
 }

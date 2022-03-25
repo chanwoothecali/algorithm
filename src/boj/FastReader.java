@@ -12,7 +12,7 @@ public class FastReader {
     public FastReader(String s) throws FileNotFoundException {
         br = new BufferedReader(new FileReader(s));
     }
-    String next() {
+    public String next() {
         while (st == null || !st.hasMoreElements()) {
             try {
                 st = new StringTokenizer(br.readLine());
@@ -22,19 +22,19 @@ public class FastReader {
         }
         return st.nextToken();
     }
-    int nextInt() {
+    public int nextInt() {
         return Integer.parseInt(next());
     }
 
-    long nextLong() {
+    public long nextLong() {
         return Long.parseLong(next());
     }
 
-    double nextDouble() {
+    public double nextDouble() {
         return Double.parseDouble(next());
     }
 
-    String nextLine() {
+    public String nextLine() {
         String str = "";
         try {
             str = br.readLine();
@@ -44,7 +44,7 @@ public class FastReader {
         return str;
     }
 
-    StringTokenizer spaceToken() {
+    public StringTokenizer spaceToken() {
         try {
             st = new StringTokenizer(br.readLine(), " ");
         } catch (IOException e) {
@@ -53,7 +53,7 @@ public class FastReader {
         return st;
     }
 
-    StringTokenizer commaToken() {
+    public StringTokenizer commaToken() {
         try {
             st = new StringTokenizer(br.readLine(), ",");
         } catch (IOException e) {

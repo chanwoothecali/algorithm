@@ -1,4 +1,6 @@
-package boj;
+package boj.binary;
+
+import boj.FastReader;
 
 public class B1300 {
 

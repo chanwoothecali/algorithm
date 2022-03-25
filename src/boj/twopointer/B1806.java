@@ -1,4 +1,6 @@
-package boj;
+package boj.twopointer;
+
+import boj.FastReader;
 
 import java.util.StringTokenizer;
 

@@ -1,4 +1,6 @@
-package boj;
+package boj.bruteforce;
+
+import boj.FastReader;
 
 public class B1182 {
     static int N, S, result;

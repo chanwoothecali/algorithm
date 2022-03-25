@@ -1,4 +1,6 @@
-package boj;
+package boj.sort;
+
+import boj.FastReader;
 
 import java.util.ArrayList;
 import java.util.Collections;

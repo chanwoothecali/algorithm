@@ -1,4 +1,6 @@
-package boj;
+package boj.binary;
+
+import boj.FastReader;
 
 import java.util.Arrays;
 
