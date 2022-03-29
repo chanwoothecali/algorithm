@@ -36,10 +36,10 @@ public class B15565 {
             totalCnt--;
             if (dolls[L - 1] == 1) lionCnt--;
 
-            while (dolls[L] == 1 && lionCnt < K && R < N) {
+            while (dolls[L] == 1 && lionCnt < K && R <= N) {
+                if (dolls[R] == 1) lionCnt++;
                 R++;
                 totalCnt++;
-                if (dolls[R] == 1) lionCnt++;
             }
 
             if (lionCnt == K) {
@@ -50,7 +50,7 @@ public class B15565 {
         if (ans > N) {
             System.out.println(-1);
         } else {
-            System.out.println(totalCnt);
+            System.out.println(ans);
         }
     }
 
