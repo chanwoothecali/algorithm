@@ -68,17 +68,16 @@ public class B1260 {
 
         queue.offer(start);
         visit[start] = true;
-        sb.append(start).append(' ');
 
         while (!queue.isEmpty()) {
             int nextNode = queue.poll();
+            sb.append(nextNode).append(' ');
             ArrayList<Integer> nodes = adj[nextNode];
 
             for (Integer node : nodes) {
                 if (visit[node]) continue;
                 queue.offer(node);
                 visit[node] = true;
-                sb.append(node).append(' ');
             }
         }
     }
