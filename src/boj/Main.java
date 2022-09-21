@@ -1,5 +1,7 @@
 package boj;
 
+import boj.binary.B7795;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -31,7 +33,10 @@ public class Main {
             for (int i = 1; i <= N; i++) {
                 boolean isPassed = true;
                 for (int j = 1; j < k; j++) {
-                    if(selected[j] > i) isPassed = false;
+                    if (selected[j] > i) {
+                        isPassed = false;
+                        break;
+                    }
                 }
                 if(isPassed) {
                     selected[k] = i;
@@ -43,10 +48,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        input();
-
-        reqFunc(1);
-        print(sb);
+//        B7795 b7795 = new B7795();
+        B7795.main(new String[]{""});
     }
 
     static class FastReader {
