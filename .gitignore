@@ -2,3 +2,6 @@
 /out/
 **/Main.java
 **/Test.java
+*.xml
+*.jar
+*.iml
