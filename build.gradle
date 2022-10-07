@@ -1,0 +1,14 @@
+plugins{
+    id 'java'
+}
+
+group 'algorithm'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'junit:junit:5.7.0'
+}
