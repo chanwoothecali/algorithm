@@ -26,7 +26,6 @@ class Solution {
 
             if (rows[row] > 1 || lines[line] > 1) {
                 count++;
-                continue;
             }
         }
 
