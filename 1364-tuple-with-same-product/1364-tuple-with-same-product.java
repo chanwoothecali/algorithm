@@ -13,7 +13,6 @@ class Solution {
         int result = 0;
         for (Integer key : keySet) {
             Integer i = map.get(key);
-            System.out.println(key + ": " + i);
             result += i * (i - 1) / 2;
         }
 
