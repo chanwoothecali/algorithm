@@ -37,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/chanwoothecali/algorithm/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/chanwoothecali/algorithm/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/chanwoothecali/algorithm/tree/master/2292-counting-words-with-a-given-prefix) |
+| [2456-construct-smallest-number-from-di-string](https://github.com/chanwoothecali/algorithm/tree/master/2456-construct-smallest-number-from-di-string) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/chanwoothecali/algorithm/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/chanwoothecali/algorithm/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 | [3447-clear-digits](https://github.com/chanwoothecali/algorithm/tree/master/3447-clear-digits) |
@@ -101,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1502-construct-k-palindrome-strings](https://github.com/chanwoothecali/algorithm/tree/master/1502-construct-k-palindrome-strings) |
+| [2456-construct-smallest-number-from-di-string](https://github.com/chanwoothecali/algorithm/tree/master/2456-construct-smallest-number-from-di-string) |
 | [2509-minimize-xor](https://github.com/chanwoothecali/algorithm/tree/master/2509-minimize-xor) |
 ## Brainteaser
 |  |
@@ -155,6 +157,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/chanwoothecali/algorithm/tree/master/2021-remove-all-occurrences-of-a-substring) |
+| [2456-construct-smallest-number-from-di-string](https://github.com/chanwoothecali/algorithm/tree/master/2456-construct-smallest-number-from-di-string) |
 | [3447-clear-digits](https://github.com/chanwoothecali/algorithm/tree/master/3447-clear-digits) |
 ## Sorting
 |  |
@@ -172,4 +175,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1477-product-of-the-last-k-numbers](https://github.com/chanwoothecali/algorithm/tree/master/1477-product-of-the-last-k-numbers) |
+## Backtracking
+|  |
+| ------- |
+| [2456-construct-smallest-number-from-di-string](https://github.com/chanwoothecali/algorithm/tree/master/2456-construct-smallest-number-from-di-string) |
 <!---LeetCode Topics End-->
