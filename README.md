@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2292-counting-words-with-a-given-prefix](https://github.com/chanwoothecali/algorithm/tree/master/2292-counting-words-with-a-given-prefix) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/chanwoothecali/algorithm/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/chanwoothecali/algorithm/tree/master/2533-bitwise-xor-of-all-pairings) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/chanwoothecali/algorithm/tree/master/2564-most-profitable-path-in-a-tree) |
 | [2685-first-completely-painted-row-or-column](https://github.com/chanwoothecali/algorithm/tree/master/2685-first-completely-painted-row-or-column) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/chanwoothecali/algorithm/tree/master/2691-count-vowel-strings-in-ranges) |
 | [2766-find-the-prefix-common-array-of-two-arrays](https://github.com/chanwoothecali/algorithm/tree/master/2766-find-the-prefix-common-array-of-two-arrays) |
@@ -126,11 +127,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/chanwoothecali/algorithm/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
 | [1396-count-servers-that-communicate](https://github.com/chanwoothecali/algorithm/tree/master/1396-count-servers-that-communicate) |
 | [1876-map-of-highest-peak](https://github.com/chanwoothecali/algorithm/tree/master/1876-map-of-highest-peak) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/chanwoothecali/algorithm/tree/master/2564-most-profitable-path-in-a-tree) |
 ## Depth-First Search
 |  |
 | ------- |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/chanwoothecali/algorithm/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
 | [1396-count-servers-that-communicate](https://github.com/chanwoothecali/algorithm/tree/master/1396-count-servers-that-communicate) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/chanwoothecali/algorithm/tree/master/2564-most-profitable-path-in-a-tree) |
 ## Union Find
 |  |
 | ------- |
@@ -193,8 +196,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/chanwoothecali/algorithm/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/chanwoothecali/algorithm/tree/master/2564-most-profitable-path-in-a-tree) |
 ## Binary Tree
 |  |
 | ------- |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/chanwoothecali/algorithm/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+## Graph
+|  |
+| ------- |
+| [2564-most-profitable-path-in-a-tree](https://github.com/chanwoothecali/algorithm/tree/master/2564-most-profitable-path-in-a-tree) |
 <!---LeetCode Topics End-->
