@@ -33,6 +33,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3332-minimum-operations-to-exceed-threshold-value-ii](https://github.com/chanwoothecali/algorithm/tree/master/3332-minimum-operations-to-exceed-threshold-value-ii) |
 | [3372-longest-strictly-increasing-or-strictly-decreasing-subarray](https://github.com/chanwoothecali/algorithm/tree/master/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/chanwoothecali/algorithm/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
+| [3643-zero-array-transformation-ii](https://github.com/chanwoothecali/algorithm/tree/master/3643-zero-array-transformation-ii) |
 ## String
 |  |
 | ------- |
@@ -62,6 +63,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/chanwoothecali/algorithm/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2145-grid-game](https://github.com/chanwoothecali/algorithm/tree/master/2145-grid-game) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/chanwoothecali/algorithm/tree/master/2691-count-vowel-strings-in-ranges) |
+| [3643-zero-array-transformation-ii](https://github.com/chanwoothecali/algorithm/tree/master/3643-zero-array-transformation-ii) |
 ## String Matching
 |  |
 | ------- |
@@ -241,4 +243,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2614-maximum-count-of-positive-integer-and-negative-integer](https://github.com/chanwoothecali/algorithm/tree/master/2614-maximum-count-of-positive-integer-and-negative-integer) |
+| [3643-zero-array-transformation-ii](https://github.com/chanwoothecali/algorithm/tree/master/3643-zero-array-transformation-ii) |
 <!---LeetCode Topics End-->
