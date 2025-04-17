@@ -8,9 +8,6 @@ class Solution {
         int ans = 0;
         for (List<Integer> list : map.values()) {
             int size = list.size();
-            if (size < 2) {
-                continue;
-            }
             for (int i = 0; i < size; i++) {
                 Integer i1 = list.get(i);
                 for (int j = i + 1; j < size; j++) {
