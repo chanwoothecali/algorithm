@@ -1,12 +1,13 @@
 class Solution {
     public int countCompleteSubarrays(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Set<Integer> set = new HashSet<>();
         for (int num : nums) {
-            map.merge(num, 1, Integer::sum);
+            set.add(num);
         }
 
-        int size = map.keySet().size();
-        Set<Integer> set = new HashSet<>();
+        int size = set.size();
+        set.clear();
+
         List<Integer> list = new ArrayList<>();
         int length = nums.length;
         int count = 0;
@@ -14,7 +15,6 @@ class Solution {
             int num = nums[i];
             set.add(num);
             list.add(num);
-            map.merge(num, -1, Integer::sum);
             while (set.size() == size) {
                 count += length - i;
                 int first = list.removeFirst();
