@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0073-set-matrix-zeroes](https://github.com/chanwoothecali/algorithm/tree/master/0073-set-matrix-zeroes) |
 | [0905-length-of-longest-fibonacci-subsequence](https://github.com/chanwoothecali/algorithm/tree/master/0905-length-of-longest-fibonacci-subsequence) |
 | [0952-word-subsets](https://github.com/chanwoothecali/algorithm/tree/master/0952-word-subsets) |
 | [1293-three-consecutive-odds](https://github.com/chanwoothecali/algorithm/tree/master/1293-three-consecutive-odds) |
@@ -101,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0073-set-matrix-zeroes](https://github.com/chanwoothecali/algorithm/tree/master/0073-set-matrix-zeroes) |
 | [0905-length-of-longest-fibonacci-subsequence](https://github.com/chanwoothecali/algorithm/tree/master/0905-length-of-longest-fibonacci-subsequence) |
 | [0952-word-subsets](https://github.com/chanwoothecali/algorithm/tree/master/0952-word-subsets) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/chanwoothecali/algorithm/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -174,6 +176,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0073-set-matrix-zeroes](https://github.com/chanwoothecali/algorithm/tree/master/0073-set-matrix-zeroes) |
 | [1396-count-servers-that-communicate](https://github.com/chanwoothecali/algorithm/tree/master/1396-count-servers-that-communicate) |
 | [1876-map-of-highest-peak](https://github.com/chanwoothecali/algorithm/tree/master/1876-map-of-highest-peak) |
 | [2145-grid-game](https://github.com/chanwoothecali/algorithm/tree/master/2145-grid-game) |
