@@ -1,7 +1,6 @@
 class Solution {
     public void setZeroes(int[][] matrix) {
-        Set<Integer> verticalIndexes = new HashSet<>();
-        Set<Integer> horizontalIndexes = new HashSet<>();
+        List<int[]> zeroIndexes = new ArrayList<>();
 
         int horizontalSize = matrix.length;
         int verticalSize = matrix[0].length;
@@ -9,21 +8,20 @@ class Solution {
         for (int i = 0; i < horizontalSize; i++) {
             for (int j = 0; j < verticalSize; j++) {
                 if (matrix[i][j] == 0) {
-                    horizontalIndexes.add(i);
-                    verticalIndexes.add(j);
+                    zeroIndexes.add(new int[]{i, j});
                 }
             }
         }
 
-        for (Integer horizontalIndex : horizontalIndexes) {
-            for (int i = 0; i < verticalSize; i++) {
-                matrix[horizontalIndex][i] = 0;
-            }
-        }
+        for (int[] zeroIndex : zeroIndexes) {
+            int horizontalIndex = zeroIndex[0];
+            int verticalIndex = zeroIndex[1];
 
-        for (Integer verticalIndex : verticalIndexes) {
             for (int i = 0; i < horizontalSize; i++) {
                 matrix[i][verticalIndex] = 0;
+            }
+            for (int i = 0; i < verticalSize; i++) {
+                matrix[horizontalIndex][i] = 0;
             }
         }
     }
