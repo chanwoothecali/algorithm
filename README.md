@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/chanwoothecali/algorithm/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [1927-maximum-ascending-subarray-sum](https://github.com/chanwoothecali/algorithm/tree/master/1927-maximum-ascending-subarray-sum) |
 | [2107-find-unique-binary-string](https://github.com/chanwoothecali/algorithm/tree/master/2107-find-unique-binary-string) |
+| [2144-maximum-difference-between-increasing-elements](https://github.com/chanwoothecali/algorithm/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2145-grid-game](https://github.com/chanwoothecali/algorithm/tree/master/2145-grid-game) |
 | [2160-minimum-operations-to-make-a-uni-value-grid](https://github.com/chanwoothecali/algorithm/tree/master/2160-minimum-operations-to-make-a-uni-value-grid) |
 | [2215-finding-3-digit-even-numbers](https://github.com/chanwoothecali/algorithm/tree/master/2215-finding-3-digit-even-numbers) |
