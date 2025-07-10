@@ -64,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3647-zero-array-transformation-iii](https://github.com/chanwoothecali/algorithm/tree/master/3647-zero-array-transformation-iii) |
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/chanwoothecali/algorithm/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
 | [3657-check-if-grid-can-be-cut-into-sections](https://github.com/chanwoothecali/algorithm/tree/master/3657-check-if-grid-can-be-cut-into-sections) |
+| [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/chanwoothecali/algorithm/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/chanwoothecali/algorithm/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 | [3747-maximum-difference-between-adjacent-elements-in-a-circular-array](https://github.com/chanwoothecali/algorithm/tree/master/3747-maximum-difference-between-adjacent-elements-in-a-circular-array) |
 ## String
@@ -187,6 +188,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2509-minimize-xor](https://github.com/chanwoothecali/algorithm/tree/master/2509-minimize-xor) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/chanwoothecali/algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 | [3647-zero-array-transformation-iii](https://github.com/chanwoothecali/algorithm/tree/master/3647-zero-array-transformation-iii) |
+| [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/chanwoothecali/algorithm/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/chanwoothecali/algorithm/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 ## Brainteaser
 |  |
@@ -372,6 +374,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [2215-finding-3-digit-even-numbers](https://github.com/chanwoothecali/algorithm/tree/master/2215-finding-3-digit-even-numbers) |
 | [2998-count-symmetric-integers](https://github.com/chanwoothecali/algorithm/tree/master/2998-count-symmetric-integers) |
+| [3741-reschedule-meetings-for-maximum-free-time-ii](https://github.com/chanwoothecali/algorithm/tree/master/3741-reschedule-meetings-for-maximum-free-time-ii) |
 ## Combinatorics
 |  |
 | ------- |
