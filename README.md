@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0073-set-matrix-zeroes](https://github.com/chanwoothecali/algorithm/tree/master/0073-set-matrix-zeroes) |
+| [0118-pascals-triangle](https://github.com/chanwoothecali/algorithm/tree/master/0118-pascals-triangle) |
 | [0594-longest-harmonious-subsequence](https://github.com/chanwoothecali/algorithm/tree/master/0594-longest-harmonious-subsequence) |
 | [0905-length-of-longest-fibonacci-subsequence](https://github.com/chanwoothecali/algorithm/tree/master/0905-length-of-longest-fibonacci-subsequence) |
 | [0952-word-subsets](https://github.com/chanwoothecali/algorithm/tree/master/0952-word-subsets) |
@@ -334,6 +335,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0118-pascals-triangle](https://github.com/chanwoothecali/algorithm/tree/master/0118-pascals-triangle) |
 | [0905-length-of-longest-fibonacci-subsequence](https://github.com/chanwoothecali/algorithm/tree/master/0905-length-of-longest-fibonacci-subsequence) |
 | [1170-shortest-common-supersequence](https://github.com/chanwoothecali/algorithm/tree/master/1170-shortest-common-supersequence) |
 | [1849-maximum-absolute-sum-of-any-subarray](https://github.com/chanwoothecali/algorithm/tree/master/1849-maximum-absolute-sum-of-any-subarray) |
