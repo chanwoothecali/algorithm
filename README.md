@@ -35,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2292-counting-words-with-a-given-prefix](https://github.com/chanwoothecali/algorithm/tree/master/2292-counting-words-with-a-given-prefix) |
 | [2308-divide-array-into-equal-pairs](https://github.com/chanwoothecali/algorithm/tree/master/2308-divide-array-into-equal-pairs) |
 | [2320-find-all-k-distant-indices-in-an-array](https://github.com/chanwoothecali/algorithm/tree/master/2320-find-all-k-distant-indices-in-an-array) |
+| [2432-number-of-zero-filled-subarrays](https://github.com/chanwoothecali/algorithm/tree/master/2432-number-of-zero-filled-subarrays) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/chanwoothecali/algorithm/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
 | [2478-longest-nice-subarray](https://github.com/chanwoothecali/algorithm/tree/master/2478-longest-nice-subarray) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/chanwoothecali/algorithm/tree/master/2533-bitwise-xor-of-all-pairings) |
@@ -294,6 +295,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1889-check-if-number-is-a-sum-of-powers-of-three](https://github.com/chanwoothecali/algorithm/tree/master/1889-check-if-number-is-a-sum-of-powers-of-three) |
 | [2160-minimum-operations-to-make-a-uni-value-grid](https://github.com/chanwoothecali/algorithm/tree/master/2160-minimum-operations-to-make-a-uni-value-grid) |
 | [2415-count-the-number-of-ideal-arrays](https://github.com/chanwoothecali/algorithm/tree/master/2415-count-the-number-of-ideal-arrays) |
+| [2432-number-of-zero-filled-subarrays](https://github.com/chanwoothecali/algorithm/tree/master/2432-number-of-zero-filled-subarrays) |
 | [2610-closest-prime-numbers-in-range](https://github.com/chanwoothecali/algorithm/tree/master/2610-closest-prime-numbers-in-range) |
 | [2649-count-total-number-of-colored-cells](https://github.com/chanwoothecali/algorithm/tree/master/2649-count-total-number-of-colored-cells) |
 | [2998-count-symmetric-integers](https://github.com/chanwoothecali/algorithm/tree/master/2998-count-symmetric-integers) |
