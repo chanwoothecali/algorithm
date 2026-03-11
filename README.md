@@ -154,6 +154,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [1009-complement-of-base-10-integer](https://github.com/chanwoothecali/algorithm/tree/master/1009-complement-of-base-10-integer) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/chanwoothecali/algorithm/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2308-divide-array-into-equal-pairs](https://github.com/chanwoothecali/algorithm/tree/master/2308-divide-array-into-equal-pairs) |
 | [2478-longest-nice-subarray](https://github.com/chanwoothecali/algorithm/tree/master/2478-longest-nice-subarray) |
